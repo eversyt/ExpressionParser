@@ -51,7 +51,7 @@ public enum BasicOperations implements IOperation
                 }
             },
 
-    DIVISION(30, PRINT_WITHOUT_SPACE, "/", ":")
+    DIVISION(40, PRINT_WITHOUT_SPACE, "/", ":")
             {
                 @Override
                 public double operate(Double firstOperand, Double secondOperand) throws CalculationException
@@ -71,7 +71,7 @@ public enum BasicOperations implements IOperation
                 }
             },
 
-    MULTIPLICATION(40, PRINT_WITHOUT_SPACE, "*")
+    MULTIPLICATION(30, PRINT_WITHOUT_SPACE, "*")
             {
                 @Override
                 public double operate(Double firstOperand, Double secondOperand) throws CalculationException
