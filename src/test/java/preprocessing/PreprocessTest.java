@@ -8,6 +8,11 @@ import static preprocessing.BasicPreprocessRules.*;
 
 public class PreprocessTest extends ExpressionTestHelper
 {
+    public static final String EXPRESSION_1_WRONG_WITH_NUMBERS = "   2.1 3,+ 13.001,.2";
+    public static final String EXPRESSION_2_WRONG_WITH_OPERATIONS_AND_BRACKETS = "=+ -)/ :mod ()[]   [%]";
+    public static final String EXPRESSION_2_WITHOUT_SQUARE_BRACKETS = "=+ -)/ :mod ()()   (%)";
+    public static final String EXPRESSION_3_WRONG = ")( 5( ) 6";
+
     @Test
     public void remove_spaces_before_and_after_expression()
     {

@@ -10,6 +10,10 @@ import static validation.BasicValidationRules.*;
 
 public class ValidationRuleTest extends ExpressionTestHelper
 {
+    public static final String EXPRESSION_1_WRONG_WITH_NUMBERS = "   2.1 3,+ 13.001,.2";
+    public static final String EXPRESSION_2_WRONG_WITH_OPERATIONS_AND_BRACKETS = "=+ -)/ :mod ()[]   [%]";
+    public static final String EXPRESSION_6 = " 1 - (2 + 3) / 5";
+
     @Rule
     public final ExpectedException thrown = ExpectedException.none();
 

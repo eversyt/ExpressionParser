@@ -10,6 +10,11 @@ import static org.junit.Assert.assertEquals;
 
 public class ExpressionParserTest extends ExpressionTestHelper
 {
+    public static final String EXPRESSION_4 = "   1 + 2*3 -1 + 4  ";
+    public static final String EXPRESSION_5 = "   1--2  ";
+    public static final String EXPRESSION_6 = " 1 - (2 + 3) / 5";
+    public static final String EXPRESSION_7 = "(2 + 2 * (2 + 3)) / ((5 + 1))";
+
     @Test
     public void build_korrekt_tree_from_expression() throws ValidationRuleException, UnsupportedElementException
     {

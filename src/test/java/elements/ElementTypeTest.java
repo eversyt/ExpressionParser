@@ -12,6 +12,9 @@ import static org.junit.Assert.assertEquals;
 
 public class ElementTypeTest extends ExpressionTestHelper
 {
+    public static final String EXPRESSION_1_WRONG_WITH_NUMBERS = "   2.1 3,+ 13.001,.2";
+    public static final String EXPRESSION_2_WRONG_WITH_OPERATIONS_AND_BRACKETS = "=+ -)/ :mod ()[]   [%]";
+
     @Before
     public void theory()
     {

@@ -22,7 +22,7 @@ public class Demo
             // Build binary-tree and return create new object Expression,
             // which keeps the root of the tree and is able to make different
             // operation with tree like print as String or calculate
-            IExpression expression = parser.build("(4!) - (2*(1 + 3))");
+            IExpression expression = parser.build("(4!) - (2*(1 + 3)) - 6");
             // Forming new String with expression without redundant brackets and
             // spaces
             System.out.println(expression.print() + " = " + expression.calculate());

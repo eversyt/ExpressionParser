@@ -13,6 +13,14 @@ import static org.junit.Assert.assertEquals;
 public class ExpressionTest extends ExpressionTestHelper
 {
     private static final double DELTA = 1e-15;
+    public static final String EXPRESSION_4 = "   1 + 2*3 -1 + 4  ";
+    public static final String EXPRESSION_5 = "   1--2  ";
+    public static final String EXPRESSION_6 = " 1 - (2 + 3) / 5";
+    public static final String EXPRESSION_7 = "(2 + 2 * (2 + 3)) / ((5 + 1))";
+    public static final String EXPRESSION_8 = "(-2 + 2 * (+ 2 + 3)) / ((5 + (-1)))";
+    public static final String EXPRESSION_9_WRONG = "2 ** 2";
+    public static final String EXPRESSION_10_WITH_NEW_OPERATOR = "2 + 12mod10";
+    public static final String EXPRESSION_11_WITH_MINUS = "4 - 2 - 3 - -1";
 
     @Rule
     public final ExpectedException thrown = ExpectedException.none();
