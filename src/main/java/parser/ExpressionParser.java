@@ -93,9 +93,11 @@ public class ExpressionParser implements IExpressionParser
     {
         if (head == null)
         {
-            head = newNode;
+            return newNode;
         }
-        else if (currentNode.getPriority() <= newNode.getPriority())
+
+        if (currentNode.getPriority() < newNode.getPriority()
+                || (currentNode.getPriority() == newNode.getPriority() && currentNode.getRightChild() == null))
         {
             connectAsRightChild(currentNode, newNode);
         }
@@ -108,7 +110,7 @@ public class ExpressionParser implements IExpressionParser
                 head = newNode;
                 connectAsLeftChild(newNode, currentNode);
             }
-            else if (parent.getPriority() <= newNode.getPriority())
+            else if (parent.getPriority() < newNode.getPriority())
             {
                 connectAsRightChild(parent, newNode);
                 connectAsLeftChild(newNode, currentNode);

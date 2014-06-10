@@ -19,10 +19,12 @@ public class ExpressionParserTest extends ExpressionTestHelper
         TreeNode head = getRootOfTreeFromParser(parser, "head");
 
         assertEquals(ADDITION, head.getNodeValue().getOperation());
-        assertEquals(ADDITION, head.getRightChild().getNodeValue().getOperation());
-        assertEquals("4", head.getRightChild().getRightChild().getNodeValue().getValue());
+        assertEquals(ADDITION, head.getLeftChild().getNodeValue().getOperation());
 
-        TreeNode node = head.getRightChild().getLeftChild().getLeftChild();
+        TreeNode node = head.getLeftChild().getRightChild();
+        assertEquals(SUBTRACTION, node.getNodeValue().getOperation());
+
+        node = node.getLeftChild();
         assertEquals(MULTIPLICATION, node.getNodeValue().getOperation());
         assertEquals("2", node.getLeftChild().getNodeValue().getValue());
 

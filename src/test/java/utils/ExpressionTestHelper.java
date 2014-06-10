@@ -57,6 +57,9 @@ public class ExpressionTestHelper
     public static final String EXPRESSION_10_WITH_NEW_OPERATOR = "2 + 12mod10";
     public static final double EXPRESSION_10_RESULT = 4d;
 
+    public static final String EXPRESSION_11_WITH_MINUS = "4 - 2 - 3 - -1";
+    public static final double EXPRESSION_11_RESULT = 0d;
+
     public static final CustomOperations MODULO = new CustomOperations(55, PRINT_WITHOUT_SPACE, "mod", "%")
     {
         @Override

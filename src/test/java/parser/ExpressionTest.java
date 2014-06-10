@@ -37,6 +37,9 @@ public class ExpressionTest extends ExpressionTestHelper
         expression = parser.build(EXPRESSION_8);
         assertEquals(EXPRESSION_8_RESULT, expression.calculate(), DELTA);
         assertEquals(EXPRESSION_8_CORRECTED, expression.print());
+
+        expression = parser.build(EXPRESSION_11_WITH_MINUS);
+        assertEquals(EXPRESSION_11_RESULT, expression.calculate(), DELTA);
     }
 
     @Test
